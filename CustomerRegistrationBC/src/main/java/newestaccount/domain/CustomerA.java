@@ -24,6 +24,46 @@ public class CustomerA {
 
     private String custNo;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getRealResNo() {
+        return realResNo;
+    }
+
+    public void setRealResNo(String realResNo) {
+        this.realResNo = realResNo;
+    }
+
+    public String getCustNm() {
+        return custNm;
+    }
+
+    public void setCustNm(String custNm) {
+        this.custNm = custNm;
+    }
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public String getCustNo() {
+        return custNo;
+    }
+
+    public void setCustNo(String custNo) {
+        this.custNo = custNo;
+    }
+
     @PostPersist
     public void onPostPersist() {
         CustomerRegisteredE customerRegisteredE = new CustomerRegisteredE(this);
