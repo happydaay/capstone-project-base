@@ -2,6 +2,8 @@
 
 # 캡스톤 프로젝트 환경
 
+##TEST
+
 1. Fork (내 저장소로 환경 복제)
 이 Repo 를 먼저 Fork 합니다. github 의 우상단 Fork를 클릭
 
