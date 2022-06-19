@@ -1,0 +1,90 @@
+server:
+  port: 8088
+
+---
+
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: PreApplicationBC
+          uri: http://localhost:8081
+          predicates:
+            - Path=/preApplicationAS/** 
+        - id: CustomerRegistrationBC
+          uri: http://localhost:8082
+          predicates:
+            - Path=/customerAS/** 
+        - id: IncomeVerificationBC
+          uri: http://localhost:8083
+          predicates:
+            - Path=/incomeVerificationResultAS/** 
+        - id: AccountOpenBC
+          uri: http://localhost:8084
+          predicates:
+            - Path=/accountAS/** 
+        - id: NotifyBC
+          uri: http://localhost:8085
+          predicates:
+            - Path=/notificationAS/** 
+        - id: frontend
+          uri: http://localhost:8080
+          predicates:
+            - Path=/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+
+---
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: PreApplicationBC
+          uri: http://preApplicationBc:8080
+          predicates:
+            - Path=/preApplicationAS/** 
+        - id: CustomerRegistrationBC
+          uri: http://customerRegistrationBc:8080
+          predicates:
+            - Path=/customerAS/** 
+        - id: IncomeVerificationBC
+          uri: http://incomeVerificationBc:8080
+          predicates:
+            - Path=/incomeVerificationResultAS/** 
+        - id: AccountOpenBC
+          uri: http://accountOpenBc:8080
+          predicates:
+            - Path=/accountAS/** 
+        - id: NotifyBC
+          uri: http://notifyBc:8080
+          predicates:
+            - Path=/notificationAS/** 
+        - id: frontend
+          uri: http://frontend:8080
+          predicates:
+            - Path=/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+server:
+  port: 8080
