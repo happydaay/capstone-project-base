@@ -2,6 +2,8 @@
 
 # 캡스톤 프로젝트 환경
 
+ git remote set-url origin https://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@github.com/happydaay/newestaccount.git
+
 ##TEST
 
 1. Fork (내 저장소로 환경 복제)
