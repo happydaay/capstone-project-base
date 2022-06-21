@@ -90,13 +90,32 @@
     - Contract Test : 자동화된 경계 테스트를 통하여 구현 오류나 API 계약위반를 미리 차단 가능한가?
 
 # 분석/설계
+  [MSAEz로 모델링한 이벤트스토밍 결과](https://labs.msaez.io/#/storming/NhsLgR1LyLPn9GkHl4YAVHYYfas1/c15631c44467e7760449f0c052ec76d0)
+## 이벤트 도출
 
-## AS-IS 조직 (Horizontally-Aligned)
-![image](https://user-images.githubusercontent.com/107157825/174691261-f51a02a4-66df-4850-89d0-565d22e6a523.png)
+![image](https://user-images.githubusercontent.com/107157825/174901320-974c7d64-7d87-4395-8fa6-171de7767292.png)
 
-## TO-BE 조직 (Vertically-Aligned)
+## 액터, 커맨드 부착하여 읽기 좋게
 
-![image](https://user-images.githubusercontent.com/107157825/174691338-f4ac3439-43a8-4c61-a307-d7a861864451.png)
+![image](https://user-images.githubusercontent.com/107157825/174901952-05fc4bf3-2289-44d9-8459-8bbac7c59eeb.png)
+
+## 어그리게잇으로 묶기
+
+![image](https://user-images.githubusercontent.com/107157825/174902634-17d33010-1cc8-47b4-92e4-97b4118fe6a0.png)
+
+## 바운디드 컨텍스트로 묶기
+
+![image](https://user-images.githubusercontent.com/107157825/174902957-f1725d09-3dd3-4239-a4a5-3d85470a4940.png)
+
+## 폴리시 부착
+
+![image](https://user-images.githubusercontent.com/107157825/174903726-15074e6c-01dc-40df-9ed1-2b42082c0a20.png)
+
+## 폴리시의 이동과 컨텍스트 매핑 (점선은 Pub/Sub, 실선은 Req/Resp)
+
+![image](https://user-images.githubusercontent.com/107157825/174904035-b67a732c-df99-4e73-8239-f384aaff306c.png)
+
+## 기능적/비기능적 요구사항을 커버하는지 검증
 
 # Event Storming 결과
 
