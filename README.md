@@ -91,6 +91,12 @@
 
 # 분석/설계
   [MSAEz로 모델링한 이벤트스토밍 결과](https://labs.msaez.io/#/storming/NhsLgR1LyLPn9GkHl4YAVHYYfas1/c15631c44467e7760449f0c052ec76d0)
+  * AS-IS 조직 (Horizontally-Aligned)
+  ![image](https://user-images.githubusercontent.com/107157825/174979904-c27860ba-abb0-4621-8794-c5fe6042abad.png)
+  
+  * TO-BE 조직 (Vertically-Aligned)
+  ![image](https://user-images.githubusercontent.com/107157825/174980095-2576cdde-6f0d-4a6d-8e72-4986dbcdd246.png)
+
 ## 이벤트 도출
 
 ![image](https://user-images.githubusercontent.com/107157825/174901320-974c7d64-7d87-4395-8fa6-171de7767292.png)
